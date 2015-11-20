@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Superlasers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @superlasers.each do |superlaser| %>
+      <tr>
+        <td><%= superlaser.name %></td>
+        <td><%= link_to 'Show', superlaser %></td>
+        <td><%= link_to 'Edit', edit_superlaser_path(superlaser) %></td>
+        <td><%= link_to 'Destroy', superlaser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Superlaser', new_superlaser_path %>
