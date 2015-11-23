@@ -5,14 +5,8 @@ class PortsController < ApplicationController
     @ports = Port.all
   end
 
-  def show
-  end
-
   def new
     @port = Port.new
-  end
-
-  def edit
   end
 
   def create
